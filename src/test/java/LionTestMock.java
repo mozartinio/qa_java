@@ -12,8 +12,9 @@ import static org.junit.Assert.assertEquals;
 public class LionTestMock {
     @Mock
     Feline feline;
+
     @Test
-    public void checkCorrectCountOfKittens() throws Exception{
+    public void checkCorrectCountOfKittens() throws Exception {
         Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getKittens()).thenReturn(1);
         assertEquals(1, lion.getKittens());
